@@ -102,6 +102,13 @@
 	  		text-align: center;
 	  		transform: translate(-50%,calc(50% + 100px));
 	  	}
+	  	.ucapan3{
+	  		font-size: 25pt;
+	  		left: 50%;
+	  		bottom: 30%;
+	  		text-align: center;
+	  		transform: translate(-50%,calc(50% + 100px));
+	  	}
 	  	.quotes{
 	  		left: 50%;
 	  		bottom: 0;
@@ -911,46 +918,28 @@
 				M=m;
 				S=s;
 
-				if (H<5){
+				if (H<20){
 					txt='UCAPAN DAN HARAPAN ULANG TAHUN';
 					if(txt != txt2 && !starting)
 						document.getElementById("quote").innerHTML = txt;
 					txt2=txt;
 				}
-				else if(H<9){
-					txt='UCAPAN DAN HARAPAN ULANG TAHUN';
+				else if(H<20){
+					txt=' UNTUK : DEVI';
 					if(txt != txt2 && !starting)
-						document.getElementById("quote").innerHTML = txt;
+						document.getElementById("quote1").innerHTML = txt;
 					txt2=txt;
 				}
-				else if(H<12){
-					txt='UCAPAN DAN HARAPAN ULANG TAHUN';
+				else if(H<20){
+					txt=' DISUSUN OLEH :';
 					if(txt != txt2 && !starting)
-						document.getElementById("quote").innerHTML = txt;
+						document.getElementById("quote2").innerHTML = txt;
 					txt2=txt;
 				}
-				else if(H<16){
-					txt='UCAPAN DAN HARAPAN ULANG TAHUN';
+				else if(H<20){
+					txt=' WILDAN GGWP YANG BISA DIBILANG LUMAYAN GANTENG (GAUSAH PROTES)';
 					if(txt != txt2 && !starting)
-						document.getElementById("quote").innerHTML = txt;
-					txt2=txt;
-				}
-				else if(H<19){
-					txt='UCAPAN DAN HARAPAN ULANG TAHUN';
-					if(txt != txt2 && !starting)
-						document.getElementById("quote").innerHTML = txt;
-					txt2=txt;
-				}
-				else if(H<23){
-					txt='UCAPAN DAN HARAPAN ULANG TAHUN';
-					if(txt != txt2 && !starting)
-						document.getElementById("quote").innerHTML = txt;
-					txt2=txt;
-				}
-				else if(H<=24){
-					txt='Selamat Bobo Sayang:*';
-					if(txt != txt2 && !starting)
-						document.getElementById("quote").innerHTML = txt;
+						document.getElementById("quote3").innerHTML = txt;
 					txt2=txt;
 				}
 				starting=false;
