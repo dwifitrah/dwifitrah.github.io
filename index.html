@@ -1027,14 +1027,14 @@
 			]
 			setInterval(randomQuote, 60000);
 			function randomQuote(){
-			  let random = quotes[Math.floor(Math.random() * quotes.length)];
+			  let random = quotes[MMath.floor(Math.random() * 10); quotes.length)];
 			  quotation.innerText = `"${random.quote}"`;
 			  source.innerText = random.source;
 			}
 
 			var i = 0;
 			
-			var speed = 10;
+			var speed = 3;
 			
 			function typeWriter() {
 				if (i < txt.length) {
