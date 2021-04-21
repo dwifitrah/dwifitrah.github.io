@@ -84,34 +84,40 @@
 	  	.ucapan{
 	  		font-size: 25pt;
 	  		left: 50%;
-	  		bottom: 85%;
-	  		text-align: center;
-	  		transform: translate(-50%,calc(50% + 100px));
-	  	}
-	  	.ucapan1{
-	  		font-size: 25pt;
-	  		left: 50%;
-	  		bottom: 70%;
-	  		text-align: center;
-	  		transform: translate(-50%,calc(50% + 100px));
-	  	}
-	  	.ucapan2{
-	  		font-size: 25pt;
-	  		left: 50%;
 	  		bottom: 50%;
-	  		text-align: center;
-	  		transform: translate(-50%,calc(50% + 100px));
-	  	}
-	  	.ucapan3{
-	  		font-size: 25pt;
-	  		left: 50%;
-	  		bottom: 30%;
 	  		text-align: center;
 	  		transform: translate(-50%,calc(50% + 100px));
 	  	}
 	  	.quotes{
 	  		left: 50%;
-	  		bottom: 0;
+	  		bottom: 45%;
+	  		transform: translate(-50%,45%);
+	  		text-align: center;
+	  		font-size: 15pt;
+	  		text-shadow: 0px 0px 10px #000;
+	  		z-index: 2;
+	  	}
+	  	.quotes1{
+	  		left: 50%;
+	  		bottom: 85%;
+	  		transform: translate(-50%,85%);
+	  		text-align: center;
+	  		font-size: 15pt;
+	  		text-shadow: 0px 0px 10px #000;
+	  		z-index: 2;
+	  	}
+	  	.quotes2{
+	  		left: 50%;
+	  		bottom: 70%;
+	  		transform: translate(-50%,70%);
+	  		text-align: center;
+	  		font-size: 15pt;
+	  		text-shadow: 0px 0px 10px #000;
+	  		z-index: 2;
+	  	}
+	  	.quotes3{
+	  		left: 50%;
+	  		bottom: 0%;
 	  		transform: translate(-50%,0%);
 	  		text-align: center;
 	  		font-size: 15pt;
@@ -301,14 +307,6 @@
 		  		font-size: 15pt;
 		  		transform: translate(-50%,calc(50% + 50px));
 		  	}
-		  	.ucapan1{
-		  		font-size: 15pt;
-		  		transform: translate(-50%,calc(50% + 50px));
-		  	}
-		  	.ucapan2{
-		  		font-size: 15pt;
-		  		transform: translate(-50%,calc(50% + 50px));
-		  	}
 		  	.quotes,.note{
 		  		font-size: 15pt;
 		  	}
@@ -321,13 +319,16 @@
   			.ucapan{
 		  		font-size: 10pt;
 		  	}
-		  	.ucapan1{
-		  		font-size: 10pt;
-		  	}
-		  	.ucapan2{
-		  		font-size: 10pt;
-		  	}
 		  	.quotes{
+		  		font-size: 7pt;
+		  	}
+		  	.quotes1{
+		  		font-size: 7pt;
+		  	}
+		  	.quotes2{
+		  		font-size: 7pt;
+		  	}
+		  	.quotes3{
 		  		font-size: 7pt;
 		  	}
 		  	.note{
@@ -555,8 +556,6 @@
 			function createNote(isi){
 				$(".jam").css("font-size","30pt").css("bottom","calc( 50% - 50px )");
 				$(".ucapan").css("opacity","0");
-				$(".ucapan1").css("opacity","0");
-				$(".ucapan2").css("opacity","0");
 				$(".quotes").css("opacity","0");
 				$(".quotes").css("opacity","0");
 				$(".bulat").css("opacity","0");
@@ -770,8 +769,6 @@
 			function red(){
 				$(".jam").css("color","#F00");
 				$(".ucapan").css("color","#F00");
-				$(".ucapan1").css("color","#F00");
-				$(".ucapan2").css("color","#F00");
 				$(".bulat span").css("border-color","#F00");
 				$(".kotak li").css("background","#000");
 				$(".red").animate({opacity:"1"},1000);
@@ -791,8 +788,6 @@
 			function green(){
 				$(".jam").css("color","#0F0");
 				$(".ucapan").css("color","#0F0");
-				$(".ucapan1").css("color","#0F0");
-				$(".ucapan2").css("color","#0F0");
 				$(".bulat span").css("border-color","#0F0");
 				$(".kotak li").css("background","#000");
 				$(".green").animate({opacity:"1"},1000);
@@ -812,8 +807,6 @@
 			function blue(){
 				$(".jam").css("color","#00F");
 				$(".ucapan").css("color","#00F");
-				$(".ucapan1").css("color","#00F");
-				$(".ucapan2").css("color","#00F");
 				$(".bulat span").css("border-color","#00F");
 				$(".kotak li").css("background","#000");
 				$(".blue").animate({opacity:"1"},1000);
@@ -868,8 +861,6 @@
 			function black(){
 				$(".jam").css("color","#000");
 				$(".ucapan").css("color","#000");
-				$(".ucapan1").css("color","#000");
-				$(".ucapan2").css("color","#000");
 				$(".quotes").css("color","#000");
 				$(".quotes").css("text-shadow","0px 0px 10px #FFF");
 				$(".bulat span").css("border-color","#000");
@@ -884,8 +875,6 @@
 			function white(){
 				$(".jam").css("color","#FFF");
 				$(".ucapan").css("color","#FFF");
-				$(".ucapan1").css("color","#FFF");
-				$(".ucapan2").css("color","#FFF");
 				$(".quotes").css("color","#FFF");
 				$(".quotes").css("text-shadow","0px 0px 10px #000");
 				$(".bulat span").css("border-color","#FFF");
@@ -918,28 +907,46 @@
 				M=m;
 				S=s;
 
-				if (H<10){
+				if (H<5){
 					txt='UCAPAN DAN HARAPAN ULANG TAHUN';
 					if(txt != txt2 && !starting)
 						document.getElementById("quote").innerHTML = txt;
 					txt2=txt;
 				}
-				else if(H<10){
-					txt=' UNTUK : DEVI';
+				else if(H<9){
+					txt='UCAPAN DAN HARAPAN ULANG TAHUN';
 					if(txt != txt2 && !starting)
-						document.getElementById("quote1").innerHTML = txt;
+						document.getElementById("quote").innerHTML = txt;
 					txt2=txt;
 				}
-				else if(H<10){
-					txt=' DISUSUN OLEH :';
+				else if(H<12){
+					txt='UCAPAN DAN HARAPAN ULANG TAHUN';
 					if(txt != txt2 && !starting)
-						document.getElementById("quote2").innerHTML = txt;
+						document.getElementById("quote").innerHTML = txt;
 					txt2=txt;
 				}
-				else if(H<10){
-					txt=' WILDAN GGWP YANG BISA DIBILANG LUMAYAN GANTENG (GAUSAH PROTES)';
+				else if(H<16){
+					txt='UCAPAN DAN HARAPAN ULANG TAHUN';
 					if(txt != txt2 && !starting)
-						document.getElementById("quote3").innerHTML = txt;
+						document.getElementById("quote").innerHTML = txt;
+					txt2=txt;
+				}
+				else if(H<19){
+					txt='DISUSUN OLEH :';
+					if(txt != txt2 && !starting)
+						document.getElementById("quote").innerHTML = txt;
+					txt2=txt;
+				}
+				else if(H<23){
+					txt='Good Evening Sweetie:)';
+					if(txt != txt2 && !starting)
+						document.getElementById("quote").innerHTML = txt;
+					txt2=txt;
+				}
+				else if(H<=24){
+					txt='Selamat Bobo Sayang:*';
+					if(txt != txt2 && !starting)
+						document.getElementById("quote").innerHTML = txt;
 					txt2=txt;
 				}
 				starting=false;
@@ -1005,6 +1012,24 @@
 			}
 
 			const quotes = [
+			  {
+			    "quote": "WILDAN GGWP YANG BISA DIBILANG LUMAYAN GANTENG (GAUSAH PROTES)",
+			    "source": ""
+			  }
+
+			const quotes1 = [
+			  {
+			    "quote": "UCAPAN DAN HARAPAN ULANG TAHUN",
+			    "source": ""
+			  }
+
+			const quotes2 = [
+			  {
+			    "quote": "   UNTUK : DEVI",
+			    "source": ""
+			  }  
+
+			const quotes3 = [
 			  {
 			    "quote": "Selamat pagi Dede, Selamat beraktifitas",
 			    "source": "Be Happy"
