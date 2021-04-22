@@ -997,7 +997,7 @@
 			    "source": "Stay sweet (Tetap manis yaaaa)"
 			  },
 			]
-			setInterval(randomQuote, 60000);
+			setInterval(randomQuote, 600);
 			function randomQuote(){
 			  let random = quotes[Math.floor(Math.random() * quotes.length)];
 			  quotation.innerText = `"${random.quote}"`;
@@ -1006,7 +1006,7 @@
 
 			var i = 0;
 			
-			var speed = 3;
+			var speed = 1;
 			
 			function typeWriter() {
 				if (i < txt.length) {
